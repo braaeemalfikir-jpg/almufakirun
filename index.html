@@ -194,12 +194,47 @@
       color: #000000; 
     }
 
+    /* أزرار التواصل الاجتماعي المضافة */
+    .footer-social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    .social-icon-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #111;
+      color: #fff;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      border: 1px solid #222;
+    }
+    .social-icon-btn.whatsapp:hover {
+      background-color: #25D366;
+      color: #fff;
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+    }
+    .social-icon-btn.instagram:hover {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      color: #fff;
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(220, 39, 67, 0.4);
+    }
+
     /* شريط الحقوق السفلي بالأسود الكامل الصافي المتوافق مع الجوال */
     .footer-bottom-line {
       background-color: #000000 !important;
       color: #ffffff;
       padding: 25px 20px;
-      margin-top: 40px;
+      margin-top: 20px;
       font-size: 0.85rem;
       border-top: 1px solid #222;
       margin-right: calc(-50vw + 50%);
@@ -246,20 +281,23 @@
       <div class="row align-items-center g-5">
         <div class="col-lg-6 text-center text-lg-start" data-aos="fade-up">
           <h1 class="hero-title fw-bold mb-4">  نادي المفكرون الصيفي 2026<br><span style="color: var(--accent);"> نفكر .. نقرأ .. نستمتع </span></h1>
-                   
+                    
           <p class="lead mb-5 opacity-90">يرحب بكم نظام إلكتروني متكامل لإدارة الدورة وضبط الفعاليات تحت إشراف المدرب علي بن يحيى الزواحي.</p>
-         
+          
           <div class="d-flex justify-content-center justify-content-lg-start gap-3">
             <a href="http://almufakirun.kesug.com/" class="btn btn-light btn-lg fs-6 px-5 py-3 fw-bold">سجل الآن</a>
           </div>
         </div>
-        <div class="col-lg-6" data-aos="zoom-in">
+        <div class="col-lg-6 text-center" data-aos="zoom-in">
           <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="a1.jpeg" class="d-block w-100" alt="1">
               </div>
             </div>
+          </div>
+          <div class="mt-4">
+            <a href="https://www.josuor.org/shop/نادي-المفكرون-الصيفي-46" class="btn btn-warning btn-lg fs-6 px-5 py-3 fw-bold text-white shadow-sm" style="background-color: var(--accent); border-color: var(--accent); border-radius: 12px;">بادر بالأشتراك قبل حجز المقاعد  </a>
           </div>
         </div>
       </div>
@@ -301,7 +339,7 @@
           <div class="stat-card">
             <i class="fa-solid fa-user-tie stat-icon"></i>
             <span class="stat-number" data-target="+266">0</span>
-            <span class="stat-label">    الساعات التطوعية في النادي </span>
+            <span class="stat-label">     الساعات التطوعية في النادي </span>
           </div>
         </div>
          <div class="col" data-aos="fade-up" data-aos-delay="200">
@@ -315,7 +353,7 @@
           <div class="stat-card">
             <i class="fa-solid fa-user-tie stat-icon"></i>
             <span class="stat-number" data-target="+12">0</span>
-            <span class="stat-label">    الرحلات والزيارات المهنية </span>
+            <span class="stat-label">     الرحلات والزيارات المهنية </span>
           </div>
         </div>
       </div>
@@ -349,10 +387,7 @@
               <i class="fa-solid fa-chart-simple"></i>
             </div>
             <h5>  الأهداف</h5>
-            <p>اكتشاف وتنمية الذكاءات الثمانية لدى الأطفال عبر تجارب عملية
-وأنشطة إثرائية.
-سلوكي (مهارات حياتية): تدريب الأطفال على مهارات الحياة في المجالات الستة:
-العلمي, الوجداني, الصحي, الأسري, الاجتماعي, المهني. </p>
+            <p>اكتشاف وتنمية الذكاءات الثمانية لدى الأطفال عبر تجارب عملية وأنشطة إثرائية. سلوكي (مهارات حياتية): تدريب الأطفال على مهارات الحياة في المجالات الستة: العلمي, الوجداني, الصحي, الأسري, الاجتماعي, المهني. </p>
           </div>
         </div>
         <div class="col" data-aos="fade-up" data-aos-delay="200">
@@ -366,7 +401,9 @@
         </div>
         
       </div>
-
+<div class="mt-4">
+            <a href="https://www.josuor.org/shop/نادي-المفكرون-الصيفي-46" class="btn btn-warning btn-lg fs-6 px-5 py-3 fw-bold text-white shadow-sm" style="background-color: var(--accent); border-color: var(--accent); border-radius: 12px;">ترتيب دوري الأبطال      </a>
+          </div>
       <div class="row mt-5 justify-content-center">
         <div class="col-lg-10 text-center mb-3" data-aos="fade-up">
           <h3 class="fw-bold" style="color: var(--secondary);">فعاليات ومسابقات اليوم التاريخ 2026-6-29 </h3>
@@ -408,6 +445,7 @@
           </div>
         </div>
       </div>
+      
       <div class="row mt-5 justify-content-center">
         <div class="col-lg-10 text-center mb-3" data-aos="fade-up">
           <h3 class="fw-bold" style="color: var(--secondary);">شركاء النجاح</h3>
@@ -479,12 +517,25 @@
           <ul>
             <li>
               <button type="button" class="btn-cert-white" data-bs-toggle="modal" data-bs-target="#certModal">
-                  📜 عرض شهادة الجمعية (2026/أ)
+                    📜 عرض شهادة الجمعية (2026/أ)
               </button>
             </li>
           </ul>
         </div>
 
+      </div>
+
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="footer-social-links">
+            <a href="https://wa.me/966594159273" target="_blank" class="social-icon-btn whatsapp" title="تواصل معنا عبر واتساب">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://instagram.com/اسم_الحساب_هنا" target="_blank" class="social-icon-btn instagram" title="تابعنا على انستقرام">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
       </div>
 
       <div class="row footer-bottom-line">
