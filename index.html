@@ -60,7 +60,7 @@
       .hero-title { font-size: 1.8rem !important; }
     }
 
-    /* --- قسم الهيرو --- */
+    /* --- قسم الهيرو والـ Carousel المستجيب بالكامل --- */
     .hero-section {
       background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
       color: var(--white);
@@ -72,17 +72,24 @@
       overflow: hidden;
       box-shadow: 0 15px 35px rgba(0,0,0,0.3);
       margin-top: 30px;
+      width: 100%;
     }
+    
+    /* جعل الصور مرنة ومستجيبة لجميع أحجام الأجهزة بدون تشويه */
     .carousel-item img {
       width: 100%;
       height: auto;
-      max-height: 350px;
+      aspect-ratio: 16 / 10; /* يحافظ على أبعاد متناسقة تلقائياً */
       object-fit: cover;
       object-position: center;
     }
+    
     @media (min-width: 992px) {
-      .carousel-item img { max-height: 450px; }
       .carousel { margin-top: 0; }
+      .carousel-item img {
+        aspect-ratio: 4 / 3; /* أبعاد مخصصة للشاشات الكبيرة والمكتبية */
+        max-height: 480px;
+      }
     }
 
     /* --- مربعات التعريف (2 في السطر بالجوال) --- */
@@ -292,7 +299,7 @@
           <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="sa1.jpeg" class="d-block w-100" alt="1">
+                <img src="a1.jpeg" class="d-block w-100" alt="1">
               </div>
             </div>
           </div>
@@ -378,7 +385,7 @@
               <i class="fa-solid fa-crown"></i>
             </div>
             <h5> الرسالة </h5>
-            <p>نسعى في نادي المفكرون إلى غرس القيم، وتنمية القدرات، وصقل المهارات لدى طلاب المرحلة الابتدائية، عبر بيئة محفزة تعزز الذكاء، وتدعم السلوك، وتبني القواعد الأكاديمية، مع مراعاة الجوانب الصحية، الوجدانية، الأسرية، والمهنية.</p>
+            <p>نسعى في نادي المفكرون إلى غرس القيم، وتنمية القدرات، وصقل المهارات لدى طلاب المرحلة الابتدائية، عبر بيئة محفزة تعزز الذكاء، وتدعم السلوك، وتبني القواعد الأكاديمية، مع مراعاة الجوانب الصحية، الوجدانية, الأسرية، والمهنية.</p>
           </div>
         </div>
         <div class="col" data-aos="fade-up">
@@ -401,9 +408,10 @@
         </div>
         
       </div>
-<div class="mt-4">
-            <a href="https://www.josuor.org/shop/نادي-المفكرون-الصيفي-46" class="btn btn-warning btn-lg fs-6 px-5 py-3 fw-bold text-white shadow-sm" style="background-color: var(--accent); border-color: var(--accent); border-radius: 12px;">ترتيب دوري الأبطال      </a>
-          </div>
+      <div class="mt-4">
+        <a href="https://www.josuor.org/shop/نادي-المفكرون-الصيفي-46" class="btn btn-warning btn-lg fs-6 px-5 py-3 fw-bold text-white shadow-sm" style="background-color: var(--accent); border-color: var(--accent); border-radius: 12px;">ترتيب دوري الأبطال      </a>
+      </div>
+      
       <div class="row mt-5 justify-content-center">
         <div class="col-lg-10 text-center mb-3" data-aos="fade-up">
           <h3 class="fw-bold" style="color: var(--secondary);">فعاليات ومسابقات اليوم التاريخ 2026-6-29 </h3>
@@ -485,7 +493,7 @@
             <img src="a1.jpeg" alt="Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/2920/2920323.png';">
             <span>نادي المفكرون</span>
           </h5>
-          <p style="color: #e2e8f0;">نظام إلكتروني متكامل لإدارة النادي وضبط الفعاليات اليومي  تحت إشراف علي  بن يحيى لعام 2026.</p>
+          <p style="color: #e2e8f0;">نظام إلكتروني متكامل لإدارة النادي وضبط الفعاليات اليومي تحت إشراف علي بن يحيى لعام 2026.</p>
         </div>
         
         <div class="col-lg-2 col-md-4 col-6">
@@ -570,7 +578,7 @@
 
     // كود تحريك الأرقام الذكي عند النزول لقسم الإحصائيات
     const counters = document.querySelectorAll('.stat-number');
-    const speed = 100; // سرعة العداد كل ما قل الرقم زادت السرعة
+    const speed = 100;
 
     const startCounters = (entries, observer) => {
       entries.forEach(entry => {
@@ -601,13 +609,13 @@
           };
           
           updateCount();
-          observer.unobserve(counter); // عشان يتحرك مرة واحدة بس وما يكرر مع كل نزول
+          observer.unobserve(counter);
         }
       });
     };
 
     const counterObserver = new IntersectionObserver(startCounters, {
-      threshold: 0.5 // يبدأ الحركة لما يظهر 50% من مربع الرقم بالشاشة
+      threshold: 0.5
     });
 
     counters.forEach(counter => counterObserver.observe(counter));
